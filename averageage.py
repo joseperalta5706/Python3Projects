@@ -11,4 +11,4 @@ averageAge = age1 + age2
 averageAge = averageAge + age3
 averageAge = averageAge / 3
 
-print("The average of three ages is " + "%.2f" % averageAge)
+print("The average of three ages is " + "%.2f" % averageAge + ".")
