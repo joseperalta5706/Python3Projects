@@ -18,5 +18,5 @@ def monthly_payment():
   monthly = float(amount_borrowed * (1 + annual_interest_rate)**payback_period * annual_interest_rate) / ((1 + annual_interest_rate)**payback_period - 1)
 
   print("Monthly payment is: " + "$" + "{:0.2f}".format(monthly))
-
-  monthly_payment()
+ 
+monthly_payment()
