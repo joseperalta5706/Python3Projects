@@ -1,0 +1,63 @@
+import random, math
+
+def output_card_value(card_value):
+    if card_value > 1 and card_value < 11:
+        print(card_value)
+    elif card_value == 11:
+        print("Jack")
+    elif card_value == 12:
+        print("Queen")
+    elif card_value == 13:
+        print("King")
+    else:
+        print("Ace")
+
+def output_card_suit(card_suit):
+    if computer_card_suit == 0:
+        print("♠️")
+    elif computer_card_suit == 1:
+        print("🔷")
+    elif computer_card_suit == 2:
+        print("♥️")
+    else:
+        print("♣️")
+
+# Compute and store the computer's card's value (2-14) using the random number generator
+computer_card_value = random.randint(2, 14)
+
+# Output the computer's card's value, outputting 2-10 as that value,
+# but output 11 as Jack, 12 as Queen, 13 as King, and 14 as Ace
+output_card_value(computer_card_value)
+
+# Get and store the computer's card's suit (0-3) using the random number generator
+computer_card_suit = random.randint(0, 4)
+
+# Output the computer's card's suit, but output 0 as Spades, 1 as
+# Diamonds, 2 as Hearts, and 3 as Clubs
+output_card_suit(computer_card_suit)
+
+# Get and store the human's card's value (2-14) using the random
+# number generator
+human_card_value = random.randint(2, 14)
+
+# Output the human's card's value, outputting 2-10 as that value, but
+# output 11 as Jack, 12 as Queen, 13 as King, and 14 as Ace
+output_card_value(human_card_value)
+
+# Get and store the human's card's suit (0-3) using the random number generator
+human_card_suit = random.randint(0, 4)
+
+# Output the human's card's suit, but output 0 as Spades, 1 as Diamonds, 2 as Hearts, and 3 as Clubs
+output_card_suit(human_card_suit)
+
+# If the computer's card's value is LESS than the human's card's
+# value, output "Human wins!"
+if human_card_value > computer_card_value:
+    print("Human wins!")
+# If the computer's card's value is EQUAL TO the human's card's value,
+# output "It's a tie."
+elif human_card_value == computer_card_value:
+    print("It's a tie.")
+# If the computer's card's value is GREATER than the human's card's
+# value, output "Computer wins!"
+else:
