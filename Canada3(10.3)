@@ -1,0 +1,36 @@
+import math
+"App to convert Fahrenheit to Celsius using input from a text file"
+
+# command to open, access, and close a file. all three are needed for this
+file = open("/content/sample_data/10.3 txt file input","r")
+with open('/content/sample_data/10.3 txt file input') as f:
+    temps = [(line) for line in f]
+file.close()
+
+
+# sentinel value defined
+sentinel = -999
+
+# define function for C to F conversion
+def celsius_conversion():
+  
+  # pulling int from file and set to their own value
+  temp1 = float(temps[0])
+  temp2 = float(temps[1])
+  temp3 = float(temps[2])
+
+  # math conversion
+  temperature = 9 % 5 * temp1 + 32
+  temperature2 = 9 % 5 * temp2 + 32
+  temperature3 = 9 % 5 * temp3 + 32
+  
+  # while loop to print the output and detect for the sentinel from list of ints
+  while temp1 != sentinel:
+    print(str(temp1) + "°C equals " + str("{:0.1f}".format(temperature)) + "°F")
+    if temp2 != sentinel:
+      print(str(temp2) + "°C equals " + str("{:0.1f}".format(temperature2)) + "°F")
+    if temp3 != sentinel:
+      print(str(temp3) + "°C equals " + str("{:0.1f}".format(temperature3)) + "°F")
+    break
+
+celsius_conversion()
