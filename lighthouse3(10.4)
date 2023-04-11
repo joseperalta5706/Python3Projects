@@ -1,19 +1,14 @@
 import math
 """ App for calculating how far away a Lighthouse can be seen, using console inputs. """
 
-# define/name function
 def view_distance():
-
-# open txt file for integer value
-  file = open("/content/sample_data/lighthouse","r")
+  file = open("/content/drive/MyDrive/Github/myfiles/lighthouse.txt","r")
   lheight = float(file.read())
   file.close()
-
-# close file
+    # use the console to input the height of a lighthouse.
     
-# use this formula to determine the view distance in miles(integer); distance = square root of: 0.8 times the height in feet
+   # use this formula to determine the view distance in miles(integer); distance = square root of: 0.8 times the height in feet
   distance = math.sqrt(.8 * lheight)
-# set everything to be output to string as well as make any format changes
   height = str(lheight)
   print("A " + height + "ft lighthouse can be seen from a distance of " + str("{:0.0f}".format(distance)) + " miles away.")
 
