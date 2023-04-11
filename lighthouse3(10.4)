@@ -1,15 +1,19 @@
 import math
-""" App for calculating how far away a Lighthouse can be seen, using console inputs. """
+"App to convert Fahrenheit to Celsius using input from a text file"
 
-def view_distance():
-  file = open("/content/drive/MyDrive/Github/myfiles/lighthouse.txt","r")
-  lheight = float(file.read())
-  file.close()
-    # use the console to input the height of a lighthouse.
-    
-   # use this formula to determine the view distance in miles(integer); distance = square root of: 0.8 times the height in feet
-  distance = math.sqrt(.8 * lheight)
-  height = str(lheight)
-  print("A " + height + "ft lighthouse can be seen from a distance of " + str("{:0.0f}".format(distance)) + " miles away.")
+# sentinel value defined
+sentinel = -999
 
-view_distance()
+# command to open, access, and close a file. all three are needed for this
+file = open("/content/drive/MyDrive/Github/myfiles/temps.txt","r")
+while True:
+  rawLine = file.readline()
+  temp = int(rawLine)
+  if temp == sentinel:
+    break  
+  far = 9 % 5 * int(temp) + 32
+  print(str(temp), end='')
+  print('°C equals ', end='')
+  print(str("{:0.1f}".format(far)), end='')
+  print("°F")
+file.close()
