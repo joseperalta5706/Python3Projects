@@ -2,8 +2,8 @@ import math
 "App to convert Fahrenheit to Celsius using input from a text file"
 
 # command to open, access, and close a file. all three are needed for this
-file = open("/content/sample_data/10.3 txt file input","r")
-with open('/content/sample_data/10.3 txt file input') as f:
+file = open("/content/drive/MyDrive/Github/myfiles/temps.txt","r")
+with open("/content/drive/MyDrive/Github/myfiles/temps.txt") as f:
     temps = [(line) for line in f]
 file.close()
 
