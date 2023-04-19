@@ -8,7 +8,7 @@ userfile.close() # close file
 
 decodedmessage = "" # set decodedmessage as a blank str.
 
-for i in range(len(codedmessage)): # for every character in 'codedmessage' do next steps.
-  decodedmessage += chr(ord(codedmessage[i]) - 1) # lower all 'codedmessage' ASCII characters codes by -1.
+for i in range(len(codedmessage)): # for every character in 'codedmessage' do next step.
+  decodedmessage += chr(ord(codedmessage[i]) - 1) # lower all 'codedmessage' ASCII characters codes by -1 and add to them to 'decodedmessage' 
 
-print(decodedmessage) # print(decodedmessage) aka(codedmessage/userfile/secret.txt) new ASCII code adjusted characters to reveal file message.
+print(decodedmessage) # print(decodedmessage) aka(codedmessage/userfile/secret.txt)'s new ASCII code adjusted characters to reveal message.
